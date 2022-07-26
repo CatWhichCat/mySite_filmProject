@@ -11,19 +11,18 @@
     <link rel="icon" href="data:;base64,=">
     <title>Document</title>
 </head>
-{% block css_editional %} {% endblock %}
 <body>
-    {% for movie in movie_list %}
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="header-logo">MovieApp</a>
+        </div>
+        <form>
+            <input type="text" class="header-search" placeholder="Поиск">
+        </form>
+    </header>
     <div class="container">
-        <div class="card">
-            <div class="imgBx">
-                <img src="{{ movie.poster.url }}" alt="Not image">
-            </div>
-            <div class="content">
-                <h2>{{ movie.title }}</h2>
-                <p>{{ movie.description }}</p>
-            </div>
-        </div>    
-    {% endfor %}
+        <div class="movies">
+        </div>
+    </div>
 </body>
 </html>
